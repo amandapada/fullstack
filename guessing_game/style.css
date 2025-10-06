@@ -1,0 +1,94 @@
+body {
+    background-color: rgb(152, 115, 212);
+}
+
+#container {
+    background: linear-gradient(to bottom, #37156e, #5c4088, #d1674d,#ff7e5f);
+    width: 50%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+    border-radius: 18px;
+    position: absolute;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFF; /* bright pink */
+    text-shadow: 
+    2px 2px 0 #ff4fa0,  /* white border effect */
+        4px 4px 10px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    font-family: sans-serif;
+    text-align: center;
+    color: #FFF;
+    display: none;
+}
+
+#reply {
+    color: rgb(80, 74, 74);
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.input_container {
+    display: flex;
+    justify-content: center; 
+    align-items: center;                 
+}
+
+#input_block {
+    margin-bottom: 15px;
+    border-radius: 6px;
+    height: 25px;
+    text-align: center;
+    display: none;
+}
+
+#guess {
+    margin-left: 10px;
+    height: 28px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-color: #ff4fa0;
+    border-width: 2px;
+    background-color: #FFF;
+    translate: transform;
+    display: none;
+}
+
+#guess:hover {
+    border-color: #37156e;
+    border-width: 2px;
+    background-color: #fae5e0;
+    cursor: pointer;
+    transform: scaleX(102%)
+}
+
+#start {
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-color: #ff4fa0;
+    border-width: 2px;
+    background-color: #FFF;
+    translate: transform;
+    font-family: sans-serif;
+}
+
+#start:hover {
+    border-color: #37156e;
+    border-width: 2px;
+    background-color: #fae5e0;
+    cursor: pointer;
+    transform: scaleX(102%);
+}
