@@ -24,6 +24,7 @@ const quizData = [
 let USERNAME = "";
 let userScore = 0;
 let current = 0;
+let scored = new Array(quizData.length).fill(false);  
 
 const startQuiz = () => {
     const _username = document.getElementById("user_name").value;
@@ -36,14 +37,11 @@ const startQuiz = () => {
     }
 };
 
-
-
-// Message displayed at the end of the game
-let displayScore = document.getElementById("display_score");
-
+// Interfaces
 let welcomeScreen = document.querySelector(".welcome_screen");
 let quizInterface = document.querySelector(".quiz_interface")
 let quizEnd = document.querySelector(".quiz_end")
+let modal = document.querySelector(".modal")
 
 let currentPage = current + 1;
 let questionNumber = document.getElementById("question_number");
@@ -54,17 +52,20 @@ let option2Name = document.getElementById("option2_name");
 let option3Name = document.getElementById("option3_name");
 let option4Name = document.getElementById("option4_name");
 
+// Buttons 
 let nextButton = document.getElementById("next");
 let previousButton = document.getElementById("prev");
 previousButton.style.display = "none";
 let submitButton = document.getElementById("submit")
-
-let modal = document.querySelector(".modal")
 let confirmButton = document.getElementById("yes")
 let rejectButtom = document.getElementById("no")
-
-let endMessage = document.getElementById("end_message")
 let retryButton = document.getElementById("retry")
+
+// Message displayed at the end of the quiz
+let displayScore = document.getElementById("display_score");
+let endMessage = document.getElementById("end_message")
+
+
 
 function displayGame() {
     welcomeScreen.style.display = "none";
@@ -79,13 +80,17 @@ function displayGame() {
 }
 
 nextButton.addEventListener('click', () => {
-    checkAnswer()
+    if (!scored[current]) {
+        checkAnswer();
+        scored[current] = true;
+    }
     current += 1;
     if (current <= quizData.length - 1) {
         currentPage += 1;
         questionNumber.innerHTML = currentPage;
         displayGame()
         previousButton.style.display = "inline-block"
+        document.querySelectorAll('input[name="option"]').forEach(radio => radio.checked = false);
     } 
     if (current == quizData.length - 1){
         nextButton.style.display = "none";
@@ -95,13 +100,13 @@ nextButton.addEventListener('click', () => {
 
 previousButton.addEventListener('click', () => {
     current -= 1
-    if (current > 0 - 1) {
+    if (current >= 0) {  
         currentPage -= 1;
         questionNumber.innerHTML = currentPage;
         displayGame()
         nextButton.style.display = "inline-block"
         submitButton.style.display = "none"
-        document.querySelectorAll('input[name="answer"]').forEach(radio => radio.checked = false);
+        document.querySelectorAll('input[name="option"]').forEach(radio => radio.checked = false);
     } 
     if (current == 0) {
         previousButton.style.display = "none"
@@ -125,7 +130,10 @@ submitButton.addEventListener('click', () => {
 });
 
 confirmButton.addEventListener('click', () => {
-    checkAnswer();
+    if (!scored[current]) {
+        checkAnswer();
+        scored[current] = true;
+    }
     endQuiz();
     modal.style.display = "none"
     quizInterface.style.display = "none"
@@ -151,6 +159,7 @@ function resetQuiz() {
     current = 0;
     userScore = 0;
     currentPage = 1;
+    scored.fill(false);  
     nextButton.style.display = "inline-block";
     previousButton.style.display = "none";
     submitButton.style.display = "none";
@@ -160,5 +169,5 @@ function resetQuiz() {
 retryButton.addEventListener('click', () => {
     quizEnd.style.display = "none"
     resetQuiz()
-    startQuiz()
+    displayGame()  
 })

@@ -1,14 +1,18 @@
 body {
     background: rgb(255, 234, 226);
+    font-family: sans-serif;
 }
 
 .container {
-    width: 50%;
+    width: 30%;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     position: absolute; 
     text-align: center;
+    background: rgb(189, 144, 85);
+    padding: 30px;
+    border-radius: 10px;
 }
 
 #user_name {
@@ -19,7 +23,7 @@ body {
 
 #start {
     width: 90px;
-    height: 25px;
+    height: 30px;
     border-radius: 15px;
     background-color: burlywood;
     color: rgb(255, 255, 255);
@@ -36,6 +40,14 @@ body {
 .quiz_interface {
     display: none;
     text-align: left;
+}
+
+.ques {
+    font-size: 24px;
+}
+
+.question_number {
+    font-size: 24px;
 }
 
 #next {
