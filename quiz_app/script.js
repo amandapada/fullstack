@@ -143,7 +143,7 @@ function endQuiz() {
     } else if (userScore >= quizData.length/2 && userScore < quizData.length) {
         endMessage.innerHTML = "Good Job! Wanna see if you can get them all this time?"
     } else {
-        endMessage.innerHTML = "Amazing! You don't need to try again, but who am I to stop you."
+        endMessage.innerHTML = "Amazing! You don't need to try again, but who am I to stop you?"
     }
 }
 
