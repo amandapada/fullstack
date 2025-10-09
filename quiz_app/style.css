@@ -1,0 +1,155 @@
+body {
+    background: rgb(255, 234, 226);
+}
+
+.container {
+    width: 50%;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute; 
+    text-align: center;
+}
+
+#user_name {
+    height: 25px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+#start {
+    width: 90px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: burlywood;
+    color: rgb(255, 255, 255);
+    translate: transform;
+}
+
+#start:hover {
+    cursor: pointer;
+    background-color: rgb(156, 114, 59);
+    color: rgb(255, 255, 255); 
+    transform: scaleX(106%);   
+}
+
+.quiz_interface {
+    display: none;
+    text-align: left;
+}
+
+#next {
+    width: 60px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: burlywood;
+    color: rgb(255, 255, 255);
+    translate: transform;
+}
+
+#next:hover {
+    cursor: pointer;
+    background-color: rgb(156, 114, 59);
+    color: rgb(255, 255, 255); 
+    transform: scaleX(106%); 
+}
+
+#submit {
+    width: 70px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: rgb(90, 218, 39);
+    color: rgb(255, 255, 255);
+    translate: transform;
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: rgb(56, 175, 9);
+    color: rgb(255, 255, 255); 
+    transform: scaleX(106%); 
+}
+
+#prev {
+    width: 75px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: burlywood;
+    color: rgb(255, 255, 255);
+    translate: transform;
+}
+
+#prev:hover {
+    cursor: pointer;
+    background-color: rgb(156, 114, 59);
+    color: rgb(255, 255, 255); 
+    transform: scaleX(106%); 
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    background-color: rgba(222, 184, 135, 0.8);
+    height: 180px;
+    width: 250px;
+    top: 51%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+}
+
+.modal p {
+    margin-top: 65px;
+}
+
+#yes {
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: rgb(90, 218, 39);
+    color: rgb(255, 255, 255);
+    translate: transform;
+}
+
+#yes:hover {
+    cursor: pointer;
+    background-color: rgb(56, 175, 9);
+    color: rgb(255, 255, 255); 
+    transform: scaleX(106%); 
+}
+
+#no {
+    width: 50px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: red;
+    color: rgb(255, 255, 255);
+    translate: transform;
+}
+
+#no:hover {
+    cursor: pointer;
+    background-color: rgb(192, 9, 9);
+    color: rgb(255, 255, 255); 
+    transform: scaleX(106%); 
+}
+
+.quiz_end {
+    display: none;
+}
+
+#retry {
+    width: 90px;
+    height: 25px;
+    border-radius: 15px;
+    background-color: burlywood;
+    color: rgb(255, 255, 255);
+    translate: transform;
+}
+
+#retry:hover {
+    cursor: pointer;
+    background-color: rgb(156, 114, 59);
+    color: rgb(255, 255, 255); 
+    transform: scaleX(106%);   
+}

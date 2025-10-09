@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome_screen">
+            <h1>Quiz Time!</h1>
+            <h2>Ready? Enter Your User Name</h2>
+            <input type="text" id="user_name" placeholder="Enter a nickname">
+            <p id="error"></p>
+            <br>
+            <button id="start" onclick="startQuiz()">Start</button>
+        </div>
+        <div class="quiz_interface">
+            <span>Question: </span> 
+            <span id="question_number"></span>
+            <p id="timer"></p>
+            <p id="question"></p>
+            <div class="option_container">
+                <label for="option1"><input type="radio" name="option" id="option1"><span id="option1_name"></span></label>
+                <br>
+                <label for="option2"><input type="radio" name="option" id="option2"><span id="option2_name"></span></label>
+                <br>
+                <label for="option3"><input type="radio" name="option" id="option3"><span id="option3_name"></span></label>
+                <br>
+                <label for="option4"><input type="radio" name="option" id="option4"><span id="option4_name"></span></label>
+            </div>
+            <br>
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+            
+            <button id="submit">Submit</button>
+        </div>
+        <div class="modal">
+            <p>Are you sure you want to submit?</p>
+            <button id="yes">Yes</button>
+            <button id="no">No</button>
+        </div>
+        <div class="quiz_end">
+            <h2>The Quiz has ended</h2>
+            <p id="display_score"></p>
+            <p id="end_message"></p>
+            <button id="retry">Try Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
