@@ -1,0 +1,295 @@
+body {
+    background: #091734;
+    color: #c1d7fd;
+    display: flex;
+    font-family: "Inter", sans-serif;
+}
+
+#search-container {
+    margin-top: 20px;
+    margin-left: 15px;
+}
+
+#clapperboard {
+    width: 30px;
+    height: 30px;
+    color: #60a6fc; 
+    margin-right: 6px;
+}
+
+#heading {
+    font-weight: 700;
+    font-size: 24px;
+    vertical-align:top;
+}
+
+.search-box {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#search_icon {
+    position: absolute;
+    left: 10px;
+    color: #627ca8;
+    width: 18px;
+    height: 18px;
+    translate: transform;
+}
+
+#search_icon:hover{
+    cursor: pointer;
+    transform: scale(105%);
+    color: #60a6fc;
+}
+
+#search_bar {
+    padding: 8px 24px 8px 32px; 
+    border: 1.5px solid #627ca8;
+    border-radius: 6px;
+    width: 250px;
+    font-size: 14px;
+    height: 23px;
+    background-color: #254274;
+    color: #c1d7fd;
+}
+
+#search_bar::placeholder{
+    color: #627ca8;
+}
+
+#search_bar:focus{
+    border-color: #60a6fc;
+    outline: none;
+    box-shadow: 0 0 2px #60affc;
+}
+
+i.fa-circle-xmark{
+    position: absolute;
+    left: 285px;
+    color: #627ca8;
+    font-size: 13px;
+    translate: transform;
+    display: none;
+}
+
+.fa-circle-xmark:hover{
+    cursor: pointer;
+    transform: scale(105%);
+    color: #60a6fc;
+}
+
+h2 {
+    font-size: 16px;
+    top: 130px;
+    margin-bottom: 10px;
+    position: absolute;
+    left: 35px;
+}
+
+#search_results {
+    margin-top: 10px;
+    background-color: #254274;
+    height: 425px;
+    border-radius: 6px;
+    padding: 24px 8px 10px 10px;
+}
+
+#movie_results {
+    margin-top: 20px;
+    height: 380px;
+    overflow-y: auto;
+}
+
+#message {
+    text-align: center;
+}
+
+.movie_card {
+    background-color: #334c79;
+    display: flex;
+    height: 100px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: none;
+}
+
+.movie_image {
+    width: 80px;
+    height: 100px;
+    border-radius: 4px;
+    margin-right: 15px;
+}
+
+.movie_text {
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 0;
+    position: absolute;
+    left: 100px;
+    top: 10px;
+}
+
+.title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.year {
+    margin: 5px 0 0 0;  
+}
+
+.actors {
+    margin: 5px 0 0 0;  
+}
+
+#to_watchlist {
+    color: rgb(0, 102, 255);
+    top: 90px;
+    left: 220px;
+    padding: 2px;
+    position: absolute;
+    translate: transform;
+}
+
+.fa-plus:hover{
+    cursor: pointer;
+    transform: scale(90%);
+}
+
+#lists {
+    display: flex;
+    margin-left: 15px;
+}
+
+.list_container {
+    background-color: #254274;
+    height: 490px;
+    border-radius: 6px;
+    padding: 8px;
+    width: 300px;
+    margin: 65px 10px 10px 10px;
+}
+
+.list_text{
+    margin-top: 10px;
+}
+
+span {
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+}
+
+.will_watch .fa-circle {
+    color: rgb(0, 102, 255);
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.watching .fa-circle {
+    color: rgb(188, 188, 50);
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.watched .fa-circle {
+    color: green;
+    font-size: 10px;
+    margin-left: 5px;
+}
+
+.will_watch hr {
+  border: none;
+  border-top: 2px solid rgb(0, 102, 255);
+  margin: 10px 5px;
+}
+
+.watching hr {
+  border: none;
+  border-top: 2px solid rgb(188, 188, 50);
+  margin: 10px 5px;
+}
+
+.watched hr {
+  border: none;
+  border-top: 2px solid green;
+  margin: 10px 5px;
+}
+
+#watchlist_movies {
+    margin-top: 10px;
+    height: 430px;
+    overflow-y: auto;
+}
+
+.watchlist_card {
+    background-color: #334c79;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 0;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 20px;
+    display: none;
+}
+
+.watch_icons {
+    margin-top: -20px;
+    display: flex;
+    position: absolute;
+    margin-left: 210px;
+}
+
+.fa-trash{
+    margin-left: 10px;
+}
+
+.fa-trash:hover{
+    cursor: pointer;
+    transform: scale(95%);
+}
+
+#to_watching {
+    color: rgb(188, 188, 50);
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+#to_watching:hover{
+    cursor: pointer;
+    transform: scale(95%);
+}
+
+#to_watched {
+    color: green;
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+#to_watching:hover{
+    cursor: pointer;
+    transform: scale(95%);
+}
+
+#watching {
+    margin-top: 10px;
+    height: 430px;
+    overflow-y: auto;
+}
+
+#watched {
+    margin-top: 10px;
+    height: 430px;
+    overflow-y: auto;
+}

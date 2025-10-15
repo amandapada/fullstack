@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+/>
+
+</head>
+<body>
+    <div id="search-container">
+        <i data-lucide="clapperboard" id="clapperboard"></i>
+        <span id="heading">Movie Watchlist</span>
+        <br>
+        <div class="search-box">
+            <i data-lucide="search" id="search_icon"></i>
+            <input type="text" placeholder="Search for a movie..." id="search_bar"/>
+            <i class="fa-solid fa-circle-xmark" id="clear_search"></i>
+        </div>
+
+        <div id="search_results">
+            <h2>Search Results</h2>
+            <div id="movie_results">
+                <h4 id="message"></h4>
+                <div class="movie_card">
+                    <img src="" alt="" class="movie_image">
+                    <div class="movie_text">
+                        <p class="title"></p>
+                        <p class="year"></p>
+                        <p class="actors"></p>
+                    </div>
+                    <i class="fa-solid fa-plus" id="to_watchlist"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="lists">
+        <div class="list_container will_watch">
+            <div class="list_text">
+                <i class="fa-solid fa-circle"></i>
+                <span>Will Watch</span>
+            </div>
+            <hr>
+            <div id="watchlist_movies" id="will_watch">
+                <div class="watchlist_card">
+                    <img src="" alt="" class="movie_image">
+                    <div class="movie_text">
+                        <p class="title"></p>
+                        <p class="year"></p>
+                        <p class="actors"></p>
+                    </div>
+                    <div class="watch_icons">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list_container watching">
+            <div class="list_text">
+                <i class="fa-solid fa-circle"></i>
+                <span>Watching</span>
+            </div>
+            <hr>
+            <div class="watchlist_movies" id="watching">
+
+            </div>
+        </div>
+        <div class="list_container watched">
+            <div class="list_text">
+                <i class="fa-solid fa-circle"></i>
+                <span>Watched</span>            
+            </div>
+            <hr>
+            <div class="watchlist_movies" id="watched">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
